@@ -15,12 +15,13 @@ E = np.sqrt(D) / 2
 X = F / E
 # print(np.linalg.solve(A, B))
 
-print(A, '\n')
-print(B, '\n')
-print(C, '\n')
-print(F, '\n')
-print(np.transpose(D), '\n')
-print(X)
+print('A = ', A, '\n')
+print('B = ', B, '\n')
+print('C = ', C, '\n')
+print('D = ', D, '\n')
+print('D^T = ', np.transpose(D), '\n')
+print('E = ', E, '\n')
+print('F = ', X, '\n')
 
 fig, ax = plt.subplots()
 ax.plot([1, 2, 3, 4], [1, 4, 2, 3])
@@ -28,3 +29,4 @@ ax.plot([1, 2, 3, 4], [1, 4, 2, 3])
 ax.set_title('Degradation of Man')
 ax.set_ylabel('Women')
 ax.set_ylabel('Money')
+
