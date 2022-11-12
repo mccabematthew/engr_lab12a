@@ -29,6 +29,48 @@ print('X = ', X, '\n')
 """--------------------------------------Activity 2--------------------------------------"""
 # As a team, we have gone through all required sections of the
 # tutorial, and each team member understands the material
+''''''
+'''
+||Part 1||
+'''
+
+x = np.linspace(-2.0, 2.0, 100)   # 100 numbers from -2 to 2 - x = np.linspace(-2.0, 2.0, 100)
+f1, f2 = 2.0, 6.0
+plt.plot(x, (1/(4*f1))*x**2, 'b', linewidth=2)
+plt.plot(x, (1/(4*f2))*x**2, 'r', linewidth=6)
+plt.ylabel('y')
+plt.xlabel('x')
+plt.show()
+
+'''
+||Part 2||
+'''
+
+x1 = np.linspace(-4.0, 4.0, 25)
+y = 2 * x1**3 + 3*x1**2 - 11*x1 - 6
+plt.plot(x1, y, 'y*')
+plt.ylabel('y values')
+plt.xlabel('x values')
+plt.show()
+
+'''
+||Part 3||
+'''
+
+x2 = np.linspace(-2 * np.pi, 2 * np.pi, 100)
+
+plt.figure()
+plt.subplot(2, 1, 1)
+plt.plot(x2, np.sin(np.sin(x2)), 'r')
+plt.ylabel('y sinsinx')
+plt.grid()
+
+plt.subplot(2, 1, 2)
+plt.plot(x2, np.cos(np.cos(x2)), 'g')
+plt.ylabel(' y coscosx')
+plt.grid()
+plt.show()
+
 
 # setting range and open domain
 x = np.arange(0, 3 * np.pi, .1)
@@ -38,53 +80,24 @@ y2 = np.cos(x)
 # plot with various axes scales
 plt.figure()
 
-# linear
+# linear cos graph
 plt.subplot(221)
-plt.plot(x, y2, 'r')
+plt.plot(x, y2, 'r', label='cos(x)')
 plt.yscale('linear')
-plt.legend('cos(x)')
+plt.legend(shadow='True', loc="lower right")
 plt.title('Plot of cos(x) and sin(x)')
 plt.ylabel('y=cos(x)')
 plt.grid(True)
 
-# symmetric log
+# linear sin graph
 plt.subplot(223)
-plt.plot(x, y1)
+plt.plot(x, y1, label='sin(x)')
 plt.yscale('linear')
-plt.legend('sin(x)')
+plt.legend(shadow='True', loc="upper right")
 plt.ylabel('y=cos(x)')
 plt.grid(True)
 
 
-# Adjust the subplot layout, because the logit one may take more space
-# than usual, due to y-tick labels like "1 - 10^{-3}"
-plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=1.7, hspace=0.25, wspace=0.1)
-
+# Format layout for graph readiability, and show plot
+plt.subplots_adjust(top=0.92, bottom=0.08, left=.15, right=1.7, hspace=0.25, wspace=0.1)
 plt.show()
-
-# x = np.linspace(-1, 1, 5000)
-# y = x**2
-# plt.xlabel("x axis")
-# plt.ylabel("y axis")
-# plt.plot(x, y, lw=2.0)
-# a = 5
-# b = 6
-# print(x)
-# plt.show()
-
-# Selects the last entry in a 4x4 subplot g
-
-# figure creation and numerical data plot
-# fig, ax = plt.subplots()
-# ax.plot([5, 7, 9, 11], [25, 49, 81, 121], l)
-#
-# # graph labels, (linear) scale values for both , and legend
-# ax.set_title('Potential Profit Line Graph')
-# ax.set_xlabel('Days Until Graduation')
-# ax.set_ylabel('Potential $')
-# plt.xscale('linear')
-# plt.yscale('linear')
-# plt.legend(['Potential $ Per Day'])
-#
-#
-# plt.show()
